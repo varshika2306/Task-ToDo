@@ -1,0 +1,76 @@
+/* ==========================================================================
+   TaskFlow Design Tokens
+   Modern · Minimal · Elegant · Professional
+   ========================================================================== */
+
+:root {
+  /* Color palette */
+  --color-primary: #4f6f52;
+  --color-primary-dark: #3e5941;
+  --color-primary-light: #6b8c6e;
+  --color-secondary: #a9b388;
+  --color-accent: #fefae0;
+  --color-bg: #f8f8f2;
+  --color-card: #ffffff;
+  --color-text: #2f3e46;
+  --color-text-muted: #6b7a75;
+  --color-border: #dad7cd;
+  --color-success: #588157;
+  --color-warning: #dda15e;
+  --color-error: #bc4749;
+
+  /* Tints used for badges / soft backgrounds */
+  --color-primary-tint: #eaf0e8;
+  --color-secondary-tint: #f1f3ea;
+  --color-success-tint: #e6efe5;
+  --color-warning-tint: #fbf0e3;
+  --color-error-tint: #f9e9e9;
+
+  /* Typography */
+  --font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.25rem;
+  --fs-3xl: 3rem;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  /* Shadows — soft, no harsh drop shadows */
+  --shadow-sm: 0 1px 2px rgba(47, 62, 70, 0.06), 0 1px 3px rgba(47, 62, 70, 0.04);
+  --shadow-md: 0 4px 12px rgba(47, 62, 70, 0.08), 0 2px 4px rgba(47, 62, 70, 0.04);
+  --shadow-lg: 0 12px 32px rgba(47, 62, 70, 0.12), 0 4px 8px rgba(47, 62, 70, 0.04);
+  --shadow-hover: 0 8px 20px rgba(79, 111, 82, 0.18);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout */
+  --sidebar-width: 240px;
+  --sidebar-width-collapsed: 76px;
+  --navbar-height: 68px;
+  --content-max-width: 1280px;
+}
