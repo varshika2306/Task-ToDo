@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.exceptions import RequestValidationError
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.database.database import Base, engine
 from app.models import User, Task
@@ -14,8 +15,6 @@ from app.core.exception_handler import (
     validation_exception_handler,
 )
 
-from fastapi.middleware.cors import CORSMiddleware
-
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
@@ -23,17 +22,20 @@ app = FastAPI(
     version="1.0.0"
 )
 
+# CORS Configuration
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "https://task-to-do-drab.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# Exception Handlers
 app.add_exception_handler(
     HTTPException,
     http_exception_handler,
@@ -44,6 +46,7 @@ app.add_exception_handler(
     validation_exception_handler,
 )
 
+# Routers
 app.include_router(auth_router)
 app.include_router(user_router)
 app.include_router(task_router)
